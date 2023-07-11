@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FunctionExtensions.Result
+{
+    public partial struct Result
+    {
+        /// <summary>
+        ///     Creates a success result.
+        /// </summary>
+        public static Result Success()
+        {
+            return new Result(false, default);
+        }
+
+        /// <summary>
+        ///     Creates a success result containing the given value.
+        /// </summary>
+        public static Result<T> Success<T>(T value)
+        {
+            return new Result<T>(false, default, value);
+        }
+
+        /// <summary>
+        ///     Creates a success result containing the given value.
+        /// </summary>
+        public static Result<T, E> Success<T, E>(T value)
+        {
+            return new Result<T, E>(false, default, value);
+        }
+
+        /// <summary>
+        ///     Creates a success result containing the given error.
+        /// </summary>
+        public static UnitResult<E> Success<E>()
+        {
+            return new UnitResult<E>(false, default);
+        }
+    }
+}

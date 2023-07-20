@@ -3,7 +3,11 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Function Extensions</Title>
+	  <Authors>Tamas Feher</Authors>
+    <Description>FunctionExtensions</Description>
   </PropertyGroup>
 
 </Project>
